@@ -434,6 +434,11 @@
         callFunction(fn, [toNumberToken(i)]);
       }
     }),
+    while: toFunctionToken((condFn, fn) => {
+      while(callFunction(condFn)[0].value == 1) {
+        callFunction(fn);
+      }
+    }),
 
     // Comparison operators ---------------------------------------------------
     // See also: #6
